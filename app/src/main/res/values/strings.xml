@@ -15,20 +15,14 @@
     <string name="quiz_last_question">Last Question</string>
     <string name="quiz_skip_warning">You may not skip the last question</string>
 
-    <string name="about_content">Splashdroid is a mobile application that allows student to learn different topics about Mobile app development from selected YouTube Videos. Student can test their learning through the application quiz function. Most students encounter challenge in the university that often force them tosearch external resources (videos and online courses). With this application, students doesn't have to spend time and effort searching for videos in YouTube. Enjoy the learning experience!
-    </string>
+
     <string name="videotopic1">Android Fundamentals</string>
     <string name="videotopic2">Designing Interactive Apps</string>
     <string name="videotopic3">Activities and Intents</string>
     <string name="videotopic4">Fragments</string>
     <string name="videotopic5">Threads and Parallelism</string>
     <string name="videotopic6">SQLite and Android</string>
-    <string name="video1description">This video is a recording of a lesson in the Android Developer Fundamentals training course, developed by Google Developer Training. The course is intended to be taught in class by an instructor. This video is provided as a reference for both instructors and students.</string>
-    <string name="video2description">This Android Studio tutorial video will help you learn the basics of Android App development. It is ideal for both beginners and professionals who wants to learn or brush up the basics of Android</string>
-    <string name="video3description">This Android Studio tutorial video will help you learn the basics of Android App development.</string>
-    <string name="video4description">This Android Studio tutorial video will help you learn the basics of Android App development.</string>
-    <string name="video5description">This Android Studio tutorial video will help you learn the basics of Android App development.</string>
-    <string name="video6description">This Android Studio tutorial video will help you learn the basics of Android App development.</string>
+
 
 
 </resources>

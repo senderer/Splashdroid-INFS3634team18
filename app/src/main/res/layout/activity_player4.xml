@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="#edeae6"
     android:gravity="center_horizontal"
     android:orientation="vertical">
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@drawable/gradient_orange">
+        android:background="@drawable/gradient_yellow"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
 
         <TextView
@@ -23,6 +24,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:paddingBottom="3dp"
             android:text="@string/videotopic4"
             android:textColor="@android:color/black"
             android:textSize="12pt"
@@ -37,39 +39,98 @@
         android:layout_width="match_parent"
         android:layout_height="237dp"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteY="25dp">
 
+    </com.google.android.youtube.player.YouTubePlayerView>
 
-    <android.support.constraint.ConstraintLayout
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar1"
         android:layout_width="match_parent"
-        android:background="@drawable/gradient_bg"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_yellow"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/homeButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="Return home" />
+
+            <Button
+                android:id="@+id/quizButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:text="Try the Quiz" />
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/gradient_orange"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="213dp"
-            android:layout_height="38dp"
-            android:text="Play Video"
-            tools:layout_editor_absoluteX="86dp"
-            tools:layout_editor_absoluteY="25dp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="in Android, a Fragment is a class which represents a behavior or portion of user interface within an Activity. Fragments were introduced to help produce UI which can adapt to various device orientations as well as function seamlessly across phones and tablets. You can even use multiple fragments within the same activity and rearrange them when the user rotates their device.
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="340dp"
-            android:layout_height="131dp"
-            android:paddingTop="70dp"
-            android:text="@string/video4description"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="176dp" />
-    </android.support.constraint.ConstraintLayout>
+Android Studio can generate fragments in a couple flavors: List Fragments which show data items in list or grid form and basic fragments which usually control a single layout. Today we will just be working with a basic fragment.
+
+##3 Generating Fragments With Android Studio
+
+So lets start by becoming familiar with how Android Studio enables us to create new fragments and their layouts on demand.
+
+Creating an Android Component in Android Studio
+Creating an Android Component in Android Studio
+
+To begin, right-click in the folder where you want to generate your fragment and select New -> Android Component.
+
+            Creating a new Blank Fragment
+            Creating a new Blank Fragment in Android Studio
+
+            Once you have done that, you will see the Android component generator wizard. To proceed select New Blank Fragment. You will see a screen like the one below prompting you to generate a layout XML as well as some basic factory methods and callbacks.
+
+            Naming a fragment in Android Studio
+            Naming a fragment in Android Studio
+
+            Next, name your fragment BlankFragment or whatever you want to call it. Leave the check boxes for Create layout XML and the other factory methods checked, more on that later.
+
+            If all goes well, the new fragment as well as its layout file (see below) will be created in your project:
+
+            Example generated fragment in Android Studio
+            Example generated fragment in Android Studio
+
+            Opening the fragment_blank.xml layout file, you should see the following:
+
+            Generated fragment layout
+
+            (Just a simple FrameLayout with a TextView stating Hello blank fragment.)
+
+            ##4 Adding an Android Button to our Fragment
+
+            Our fragment is awfully boring now so lets add a button and some interactivity.
+
+            In Android Studio's design perspective, select the fragment_blank.xml file and drag and drop a button into the center portion. Change the text on the button to Wheee! That will add a button with the id button to our BlankFragment.
+" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

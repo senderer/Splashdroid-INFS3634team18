@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="#edeae6"
     android:gravity="center_horizontal"
     android:orientation="vertical">
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@drawable/gradient_orange">
+        android:background="@drawable/gradient_yellow"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
 
         <TextView
@@ -23,6 +24,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:paddingBottom="3dp"
             android:text="@string/videotopic6"
             android:textColor="@android:color/black"
             android:textSize="12pt"
@@ -37,39 +39,96 @@
         android:layout_width="match_parent"
         android:layout_height="237dp"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteY="25dp">
 
+    </com.google.android.youtube.player.YouTubePlayerView>
 
-    <android.support.constraint.ConstraintLayout
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar1"
         android:layout_width="match_parent"
-        android:background="@drawable/gradient_bg"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_yellow"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/homeButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="Return home" />
+
+            <Button
+                android:id="@+id/quizButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:text="Try the Quiz" />
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/gradient_orange"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="213dp"
-            android:layout_height="38dp"
-            android:text="Play Video"
-            tools:layout_editor_absoluteX="86dp"
-            tools:layout_editor_absoluteY="25dp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SQLite is a opensource SQL database that stores data to a text file on a device. Android comes in with built in SQLite database implementation.
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="340dp"
-            android:layout_height="131dp"
-            android:paddingTop="70dp"
-            android:text="@string/video6description"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="176dp" />
-    </android.support.constraint.ConstraintLayout>
+SQLite supports all the relational database features. In order to access this database, you don't need to establish any kind of connections for it like JDBC,ODBC e.t.c
+Database - Package
+
+The main package is android.database.sqlite that contains the classes to manage your own databases
+Database - Creation
+
+In order to create a database you just need to call this method openOrCreateDatabase with your database name and mode as a parameter. It returns an instance of SQLite database which you have to receive in your own object.Its syntax is given below
+
+SQLiteDatabase mydatabase = openOrCreateDatabase(your database name,MODE_PRIVATE,null);
+
+Apart from this , there are other functions available in the database package , that does this job. They are listed below
+Sr.No 	Method and Description
+1
+
+openDatabase(String path, SQLiteDatabase.CursorFactory factory, int flags, DatabaseErrorHandler errorHandler)
+
+This method only opens the existing database with the appropriate flag mode. The common flags mode could be OPEN_READWRITE OPEN_READONLY
+2
+
+openDatabase(String path, SQLiteDatabase.CursorFactory factory, int flags)
+
+It is similar to the above method as it also opens the existing database but it does not define any handler to handle the errors of databases
+3
+
+openOrCreateDatabase(String path, SQLiteDatabase.CursorFactory factory)
+
+It not only opens but create the database if it not exists. This method is equivalent to openDatabase method.
+4
+
+openOrCreateDatabase(File file, SQLiteDatabase.CursorFactory factory)
+
+This method is similar to above method but it takes the File object as a path rather then a string. It is equivalent to file.getPath()
+Database - Insertion
+
+we can create table or insert data into table using execSQL method defined in SQLiteDatabase class.
+" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

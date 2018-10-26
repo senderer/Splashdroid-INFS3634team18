@@ -60,6 +60,11 @@
             android:name=".Videos.VideoActivity6"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".Videos.VideoActivity7"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
 
 
         <activity android:name=".InfoActivity"

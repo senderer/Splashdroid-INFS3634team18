@@ -15,6 +15,7 @@ import unsw.infs3634.assignment.splashdroid.Videos.VideoListActivity;
 public class MainActivity extends AppCompatActivity {
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "fonts/Dense-Regular.otf");
         splashdroid.setTypeface(custom_font);
 
-
+        //buttons
 
         videoButton.setOnClickListener(new View.OnClickListener() {
             @Override

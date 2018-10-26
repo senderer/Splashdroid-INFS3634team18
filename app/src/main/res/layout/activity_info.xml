@@ -76,7 +76,7 @@
             android:layout_weight="1"
             android:background="@android:color/white"
             android:padding="10dp"
-            android:text="@string/about_content"/>
+            android:text="Splashdroid is a mobile application that allows student to learn different topics about Mobile app development from selected YouTube Videos. Student can test their learning through the application quiz function. Most students encounter challenge in the university that often force them tosearch external resources (videos and online courses). With this application, students doesn't have to spend time and effort searching for videos in YouTube. Enjoy the learning experience!"/>
     </LinearLayout>
 
 

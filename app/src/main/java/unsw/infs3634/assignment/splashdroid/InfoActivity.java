@@ -16,9 +16,8 @@ public class InfoActivity extends AppCompatActivity {
 
         //Set toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("App Information");
+        toolbar.setTitle("Additional sources");
         setSupportActionBar(toolbar);
-
 
         TextView infoTitle = (TextView) findViewById(R.id.infoTitle);
         //use custom font
@@ -26,8 +25,6 @@ public class InfoActivity extends AppCompatActivity {
         infoTitle.setTypeface(custom_font);
     }
 }
-
-
 
 
 

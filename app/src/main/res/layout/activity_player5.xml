@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="#edeae6"
     android:gravity="center_horizontal"
     android:orientation="vertical">
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@drawable/gradient_orange">
+        android:background="@drawable/gradient_yellow"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
 
         <TextView
@@ -23,6 +24,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:paddingBottom="3dp"
             android:text="@string/videotopic5"
             android:textColor="@android:color/black"
             android:textSize="12pt"
@@ -37,39 +39,67 @@
         android:layout_width="match_parent"
         android:layout_height="237dp"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteY="25dp">
 
+    </com.google.android.youtube.player.YouTubePlayerView>
 
-    <android.support.constraint.ConstraintLayout
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar1"
         android:layout_width="match_parent"
-        android:background="@drawable/gradient_bg"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_yellow"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/homeButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="Return home" />
+
+            <Button
+                android:id="@+id/quizButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:text="Try the Quiz" />
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/gradient_orange"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="213dp"
-            android:layout_height="38dp"
-            android:text="Play Video"
-            tools:layout_editor_absoluteX="86dp"
-            tools:layout_editor_absoluteY="25dp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A thread is a thread of execution in a program. The Java Virtual Machine allows an application to have multiple threads of execution running concurrently.
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="340dp"
-            android:layout_height="131dp"
-            android:paddingTop="70dp"
-            android:text="@string/video5description"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="176dp" />
-    </android.support.constraint.ConstraintLayout>
+Every thread has a priority. Threads with higher priority are executed in preference to threads with lower priority. Each thread may or may not also be marked as a daemon. When code running in some thread creates a new Thread object, the new thread has its priority initially set equal to the priority of the creating thread, and is a daemon thread if and only if the creating thread is a daemon.
+
+When a Java Virtual Machine starts up, there is usually a single non-daemon thread (which typically calls the method named main of some designated class). The Java Virtual Machine continues to execute threads until either of the following occurs:
+
+    The exit method of class Runtime has been called and the security manager has permitted the exit operation to take place.
+    All threads that are not daemon threads have died, either by returning from the call to the run method or by throwing an exception that propagates beyond the run method.
+" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

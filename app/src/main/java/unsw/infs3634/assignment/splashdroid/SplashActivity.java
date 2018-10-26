@@ -10,7 +10,7 @@ import android.view.View;
 
 public class SplashActivity extends AppCompatActivity{
     Context context;
-
+    //splash timer
     private final int SPLASH_DISPLAY_LENGTH = 4000;
 
     @Override
@@ -27,6 +27,7 @@ public class SplashActivity extends AppCompatActivity{
 
         nextIntent();
     }
+    //intent to main menu
     public void nextIntent() {
 
         new Handler().postDelayed(new Runnable() {

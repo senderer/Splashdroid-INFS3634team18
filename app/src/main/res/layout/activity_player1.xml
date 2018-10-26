@@ -3,10 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#edeae6"
     android:gravity="center_horizontal"
     android:orientation="vertical">
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -43,7 +44,7 @@
     </com.google.android.youtube.player.YouTubePlayerView>
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
+        android:id="@+id/app_bar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gradient_yellow"
@@ -55,7 +56,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/homeButton"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
@@ -63,28 +64,116 @@
                 android:text="Return home" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/quizButton"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
                 android:layout_weight="1"
                 android:text="Try the Quiz" />
 
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical" />
-            </ScrollView>
-
 
         </LinearLayout>
 
     </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Introduction:
+
+Android is a Linux based operating system it is designed primarily for touch screen mobile devices such as smart phones and tablet computers. The operating system have developed a lot in last 15 years starting from black and white phones to recent smart phones or mini computers. One of the most widely used mobile OS   these days is android.  The android is software that was founded in Palo Alto of California in 2003.
+
+AndroidThe android is a powerful operating system and it supports large number of applications in Smartphones. These applications are more comfortable and advanced for the users. The hardware that supports android software is based on ARM architecture platform. The android is an open source operating system means that it’s free and any one can use it. The android has got millions of apps available that can help you managing your life one or other way and it is available low cost in market at that reasons android is very popular.
+
+Android Logo
+
+The android development supports with the full java programming language. Even other packages that are API and JSE are not supported. The first version 1.0 of android development kit (SDK) was released in 2008 and latest updated version is jelly bean.
+Android Architecture:
+
+The android is a operating system and is a stack of software components which is divided into five sections and four main layers that is
+
+    Linux kernel
+    Libraries
+    Android runtime
+
+Application frame work:
+
+Android Architecture
+Linux kernel:
+
+The android uses the powerful Linux kernel and it supports wide range of hardware drivers. The kernel is the heart of the operating system that manages input and output requests from software. This provides basic system functionalities like process management, memory management, device management like camera, keypad, display etc the kernel handles all the things. The Linux is really good at networking and it is not necessary to interface it to the peripheral hardware. The kernel itself does not interact directly with the user but rather interacts with the shell and other programs as well as with the hard ware devices on the system.
+Libraries:
+
+The on top of a Linux kennel there is a set of libraries including open source web browser such as webkit, library libc. These libraries are used to play and record audio and video. The SQLite is a data base which is useful for storage and sharing of application data. The SSL libraries are responsible for internet security etc.
+Android Runtime:
+
+The android runtime provides a key component called Dalvik Virtual Machine which is a kind of java virtual machine. It is specially designed and optimized for android. The Dalvik VM is the process virtual machine in the android operating system. It is a software that runs apps on android devices.
+
+The Dalvik VM makes use of Linux core features like memory management and multithreading which is in a java language. The Dalvik VM enables every android application to run it own process. The Dalvik VM  executes the files in the .dex format.
+Application frame work:
+
+The application frame work layer provides many higher level services to applications such as windows manager, view system, package manager, resource manager etc. The application developers are allowed to make use of these services in their application.
+Applications and Features:
+
+You will find all the android applications at the top layer and you will write your application and install on this layer. Example of such applications are contacts, books, browsers, services etc. Each application perform a different role in the over all applications.
+
+Features:
+
+    Head set layout
+    Storage
+    Connectivity: GSM/EDGE, IDEN, CDMA, Bluetooth, WI-FI, EDGE,3G,NFC, LTE,GPS.
+    Messaging: SMS, MMS, C2DM (could to device messaging), GCM (Google could messaging)
+    Multilanguage support
+    Multi touch
+    Video calling
+    Screen capture
+    External storage
+    Streaming media support
+    Optimized graphics
+
+Android Features
+Android Emulator:
+
+The Emulator is a new application in android operating system. The emulator is a new prototype that is used to develop and test android applications without using any physical device.
+
+Android Emulator
+
+The android emulator has all of the hardware and software features like mobile device except phone calls. It provides a variety of navigation and control keys. It also provides a screen to display your application. The emulators utilize the android virtual device configurations. Once your application is running on it, it can use services of the android platform to help other applications, access the network, play audio, video, store and retrieve the data.
+Application of Android- Android Application Controlled Remote Robot
+
+Operation:
+
+It controls the robotic vehicle using an android application. The Bluetooth device is interfaced to control unit on the robot for sensing the signals transmitted by the android application. The remote operation is achieved by any smart-phone or table etc with android OS based on touch screen operation. The transmitting end uses an android application device remote through which commands are transmitted and at the receiver side , these commands are used for controlling the robot in all directions such as forward ,backward and left or right etc.
+
+The receiver end movement is achieved by two motors that are interfaced to the microcontroller. The serial communication data sent from the android application is received by a Bluetooth receiver that is interfaced to the microcontroller.
+
+Android Application
+
+Advantages:
+
+    Android is Linux based open source operating system , it can be developed by any one
+    Easy access to the android apps
+    You can replace the battery and mass storage, disk drive and UDB option
+    Its supports all Google services
+    The operating system is able to inform you of a new SMS and Emails or latest updates.
+    It supports Multitasking
+    Android phone can also function as a router to share internet
+    Its free to customize
+    Can install a modified ROM
+    Its supports 2D and 3D graphics
+" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

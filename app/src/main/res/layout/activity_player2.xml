@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="#edeae6"
     android:gravity="center_horizontal"
     android:orientation="vertical">
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@drawable/gradient_orange">
+        android:background="@drawable/gradient_yellow"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
 
         <TextView
@@ -23,6 +24,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
+            android:paddingBottom="3dp"
             android:text="@string/videotopic2"
             android:textColor="@android:color/black"
             android:textSize="12pt"
@@ -37,39 +39,89 @@
         android:layout_width="match_parent"
         android:layout_height="237dp"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteY="25dp">
 
+    </com.google.android.youtube.player.YouTubePlayerView>
 
-    <android.support.constraint.ConstraintLayout
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar1"
         android:layout_width="match_parent"
-        android:background="@drawable/gradient_bg"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_yellow"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/homeButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:text="Return home" />
+
+            <Button
+                android:id="@+id/quizButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:text="Try the Quiz" />
+
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/gradient_orange"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="213dp"
-            android:layout_height="38dp"
-            android:text="Play Video"
-            tools:layout_editor_absoluteX="86dp"
-            tools:layout_editor_absoluteY="25dp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="A – Palette – The palette provides access to the range of view components provided by the Android SDK. These are grouped into categories for easy navigation. Items may be added to the layout either by dragging a view component from the palette and dropping it at the desired position on the layout, or by clicking on a widget in the palette and then clicking at the location on the layout where it is to be positioned.
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="340dp"
-            android:layout_height="131dp"
-            android:paddingTop="70dp"
-            android:text="@string/video2description"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="176dp" />
-    </android.support.constraint.ConstraintLayout>
+B – Device Screen – The device screen provides a visual “what you see is what you get” representation of the user interface layout as it is being designed. This layout allows for direct manipulation of the design in terms of allowing views to be selected, deleted, moved and resized. The device model represented by the layout can be changed at any time using a menu located in the toolbar. Note that if you find the image of the device frame surrounding the display layout distracting, it can be turned off by selecting the settings menu in the toolbar (represented by the gear icon) and toggling off the Include Device Frames (if available) option.
+
+C – Component Tree – As outlined in the previous chapter (Understanding Android Views, View Groups and Layouts) user interfaces are constructed using a hierarchical structure. The component tree provides a visual overview of the hierarchy of the user interface design. Selecting an element from the component tree will cause the corresponding view in the layout to be selected. Similarly, selecting a view from the device screen layout will select that view in the component tree hierarchy.
+
+D – Properties – All of the component views listed in the palette have associated with them a set of properties that can be used to adjust the behavior and appearance of that view. The Designer’s properties panel provides access to the properties of the currently selected view in the layout allowing changes to be made.
+
+E – Toolbar – The Designer toolbar provides quick access to a wide range of options including, amongst other options, the ability to zoom in and out of the device screen layout, change the device model currently displayed, rotate the layout between portrait and landscape and switch to a different Android SDK API level. The toolbar also has a set of context sensitive buttons which will appear when relevant view types are selected in the device screen layout.
+
+F – Mode Switching Tabs – The tabs located along the lower edge of the Designer provide a way to switch back and forth between the Designer tool’s text and design modes.
+
+Text Mode
+
+It is important to keep in mind when using the Android Studio Designer tool that all it is really doing is providing a user friendly approach to creating XML layout resource files. At any time during the design process, the underlying XML can be viewed and directly edited simply by clicking on the Text tab located at the bottom of the Designer tool panel. To return to design mode, simply click on the Design tab.
+
+Figure 15-2 highlights the key areas of the Android Studio Designer tool in text mode:
+
+
+The key areas of the Android Studio Designer tool in Text mode
+
+Figure 15-2
+
+
+A – Editor – The editor panel displays the XML that makes up the current user interface layout design. This is the full Android Studio editor environment containing all of the features previously outlined in the The Basics of the Android Studio Code Editor chapter of this book.
+
+B – Preview – As changes are made to the XML in the editor, these changes are visually reflected in the preview window. This provides instant visual feedback on the XML changes as they are made in the editor, thereby avoiding the need to switch back and forth between text and design mode to see changes. Whilst the preview does not allow direct manipulation of the views, double clicking on a view in the preview will automatically switch to design mode and preselect the corresponding view in the device screen layout.
+
+C – Toolbar – The toolbar in text mode provides a subset of those functions available in design mode with the addition of a button to take a screenshot of the current device screen layout.
+
+D - Mode Switching Tabs – The tabs located along the lower edge of the Designer provide a way to switch back and forth between the Designer tool’s text and design modes. " />
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>
